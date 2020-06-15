@@ -5,17 +5,6 @@ phases:
   install:
     runtime-versions:
       golang: 1.18
-    commands:
-      - go get -u golang.org/x/lint/golint
-
-  pre_build: 
-    commands:
-
-      # Ensure code passes all lint tests
-      - golint -set_exit_status
-
-      # Run all tests included with our application
-      - go test
 
   build:
     commands:
